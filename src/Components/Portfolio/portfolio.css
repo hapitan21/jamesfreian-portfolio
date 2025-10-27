@@ -1,0 +1,143 @@
+.container.portfolio__container {
+  width: 30%;
+  padding-bottom: 2rem;
+}
+
+.swiper-button {
+  display: flex;
+  position: absolute;
+  top: calc(50% - 12px);
+  z-index: 10;
+  cursor: pointer;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.swiper-button:hover {
+  color: var(--color-white);
+}
+
+.swiper-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.image-swiper-button-prev {
+  left: 100px;
+}
+.image-swiper-button-next {
+  right: 100px;
+}
+.swiper-button-disabled {
+  color: var(--color-white);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: var(--color-primary);
+}
+
+.portfolio_item {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+}
+
+.flip-description {
+  transform: rotateY(180deg);
+  transition: all 885ms ease;
+}
+
+.flip_description {
+  transform: rotateY(0deg);
+  transition: all 885ms ease;
+}
+
+.none-flip {
+  transform: rotateY(180deg);
+}
+
+.portfolio_item-less {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  margin: -5px 0px 0px 5px;
+}
+
+.portfolio_item-more {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  margin: -5px 5px 0px 0px;
+}
+
+.portfolio-description {
+  margin: -2.2px 10px 0px 0px;
+  font-size: 18px;
+}
+
+.show_description {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.show_description:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.portfolio_item-description {
+  margin: 5px;
+}
+
+.portfolio_item-img {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.portfolio_item h3 {
+  text-align: center;
+  margin: 1.2rem 0 2rem;
+}
+
+.portfolio_item-btn {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.demoNone {
+  display: none;
+}
+
+/* ===================== MEDIA QUERY (TABS) ====================== */
+
+@media screen and (max-width: 1024px) {
+  .container.portfolio__container {
+    width: 60%;
+  }
+
+  .portfolio__container {
+    gap: 1.2rem;
+  }
+}
+
+/* ===================== MEDIA QUERY (MOBILES) ====================== */
+
+@media screen and (max-width: 600px) {
+  .container.portfolio__container {
+    width: var(--container-width-sm);
+  }
+
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .swiper-button {
+    display: none;
+  }
+}

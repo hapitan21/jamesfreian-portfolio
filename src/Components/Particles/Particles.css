@@ -1,0 +1,27 @@
+/* Particles background container */
+.particles-container {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* allow clicks through the canvas */
+  z-index: -1; /* behind content */
+  overflow: hidden;
+}
+
+/* If you want to position it below header but above background, use a less negative z-index */
+.particles-container.bring-forward {
+  z-index: 0;
+}
+
+/* Canvas produced by ogl will size itself; ensure it covers the container */
+.particles-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Optional helper class to disable pointer-events when debugging */
+.particles-container.debug {
+  pointer-events: auto;
+}
